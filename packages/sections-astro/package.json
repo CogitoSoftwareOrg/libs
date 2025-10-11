@@ -1,0 +1,32 @@
+{
+  "name": "@cogisoft/ui-astro",
+  "version": "0.0.1",
+  "type": "module",
+  "private": false,
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/svelte": "^5.0.0",
+    "svelte": "^5.0.0",
+    "@cogisoft/ui-svelte": "^0.1.0"
+  },
+  "devDependencies": {
+    "astro": "^5.14.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && echo 'Nothing to build for library (publishing sources)'",
+    "preview": "astro preview"
+  },
+  "keywords": [
+    "astro",
+    "components",
+    "ui"
+  ]
+}
