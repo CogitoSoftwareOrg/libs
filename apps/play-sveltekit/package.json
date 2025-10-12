@@ -45,6 +45,6 @@
 		"vitest-browser-svelte": "^1.1.0"
 	},
 	"dependencies": {
-		"ui-svelte-daisy": "file:../../packages/ui-svelte-daisy/ui-svelte-daisy-0.0.1.tgz"
+		"@cogisoft/ui-svelte-daisy": "workspace:*"
 	}
 }

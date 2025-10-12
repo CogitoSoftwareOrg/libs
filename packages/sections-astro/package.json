@@ -18,8 +18,8 @@
     ".": "./src/index.ts"
   },
   "peerDependencies": {
+    "@cogisoft/ui-svelte-daisy": "workspace:^",
     "@astrojs/svelte": "^5.0.0",
-    "@cogisoft/ui-svelte-daisy": "^0.1.0",
     "astro": "^5.0.0"
   },
   "devDependencies": {

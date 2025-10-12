@@ -14,9 +14,9 @@ importers:
 
   apps/play-sveltekit:
     dependencies:
-      ui-svelte-daisy:
-        specifier: file:../../packages/ui-svelte-daisy/ui-svelte-daisy-0.0.1.tgz
-        version: file:packages/ui-svelte-daisy/ui-svelte-daisy-0.0.1.tgz(svelte@5.39.11)
+      '@cogisoft/ui-svelte-daisy':
+        specifier: workspace:*
+        version: link:../../packages/ui-svelte-daisy
     devDependencies:
       '@eslint/compat':
         specifier: ^1.4.0
@@ -3396,12 +3396,6 @@ packages:
 
   ufo@1.6.1:
     resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
-
-  ui-svelte-daisy@file:packages/ui-svelte-daisy/ui-svelte-daisy-0.0.1.tgz:
-    resolution: {integrity: sha512-yh5TpVdmzazgmocxZcljy+nYnwbC9ZNWJ+OjOoYbM8Z7ndLsQ5YDOdtZSQ6EwykKCpG5PG95t6BtMs97E0J/Iw==, tarball: file:packages/ui-svelte-daisy/ui-svelte-daisy-0.0.1.tgz}
-    version: 0.0.1
-    peerDependencies:
-      svelte: ^5.0.0
 
   ultrahtml@1.6.0:
     resolution: {integrity: sha512-R9fBn90VTJrqqLDwyMph+HGne8eqY1iPfYhPzZrvKpIfwkWZbcYlfpsb8B9dTvBfpy1/hqAD7Wi8EKfP9e8zdw==}
@@ -7420,10 +7414,6 @@ snapshots:
   typescript@5.9.3: {}
 
   ufo@1.6.1: {}
-
-  ui-svelte-daisy@file:packages/ui-svelte-daisy/ui-svelte-daisy-0.0.1.tgz(svelte@5.39.11):
-    dependencies:
-      svelte: 5.39.11
 
   ultrahtml@1.6.0: {}
 
