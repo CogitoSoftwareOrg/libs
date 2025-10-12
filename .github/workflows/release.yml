@@ -45,7 +45,6 @@ jobs:
       - name: 🚀 Create Release PR or Publish
         uses: changesets/action@v1
         with:
-          # Без фильтров: соберём все воркспейсы, где есть build (не упадёт, если его нет)
           publish: |
             pnpm -r --if-present build
             pnpm changeset publish
