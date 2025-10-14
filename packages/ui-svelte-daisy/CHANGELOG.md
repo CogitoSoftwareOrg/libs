@@ -1,5 +1,11 @@
 # @cogisoft/ui-svelte-daisy
 
+## 0.1.10
+
+### Patch Changes
+
+- fa92dc0: Little changes and astro Images
+
 ## 0.1.9
 
 ### Patch Changes
