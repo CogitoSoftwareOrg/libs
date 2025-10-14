@@ -1,5 +1,13 @@
 # @cogisoft/ui-astro
 
+## 0.1.11
+
+### Patch Changes
+
+- afe3744: Little fixes
+- Updated dependencies [afe3744]
+  - @cogisoft/ui-svelte-daisy@0.1.11
+
 ## 0.1.10
 
 ### Patch Changes
