@@ -24,6 +24,7 @@
 		square?: boolean;
 		circle?: boolean;
 		wide?: boolean;
+		target?: '_blank' | '_self' | '_parent' | '_top';
 		children: Snippet;
 	}
 
@@ -41,7 +42,8 @@
 		square = false,
 		circle = false,
 		wide = false,
-		class: className = ''
+		class: className = '',
+		target = '_self'
 	}: Props = $props();
 
 	const colorClasses = {
@@ -89,6 +91,7 @@
 			wide && 'btn-wide',
 			className
 		]}
+		{target}
 	>
 		{@render children()}
 	</a>
