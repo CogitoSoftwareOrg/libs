@@ -1,0 +1,124 @@
+---
+/**
+ * Hero Component Examples
+ * Testing different configurations and variations
+ */
+import { Hero } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Image on Right (default) -->
+    <Hero
+      title="Вариант 1: Изображение Справа"
+      description="Это классическая компоновка героя с изображением справа и текстом слева. Идеально для большинства лендингов."
+      buttonText="Начать Сейчас"
+      image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop"
+      href="https://example.com"
+      position="right"
+      imageWidth={1200}
+      imageHeight={800}
+    />
+
+    <!-- Example 2: Image on Left -->
+    <Hero
+      title="Вариант 2: Изображение Слева"
+      description="Альтернативная компоновка с изображением слева. Используйте для разнообразия на странице."
+      buttonText="Узнать Больше"
+      image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop"
+      href="#learn-more"
+      position="left"
+      imageWidth={1200}
+      imageHeight={800}
+    />
+
+    <!-- Example 3: Overlay Background -->
+    <Hero
+      title="Вариант 3: Наложение Фона"
+      description="Текст поверх изображения с темным наложением для лучшей читаемости. Эффектный вариант для привлечения внимания."
+      buttonText="Попробовать Бесплатно"
+      image="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=1080&fit=crop"
+      overlay={true}
+      center={true}
+      imageWidth={1920}
+      imageHeight={1080}
+    />
+
+    <!-- Example 4: Overlay Without Center -->
+    <Hero
+      title="Вариант 4: Наложение Без Центрирования"
+      description="Текст поверх изображения, но выровнен по левому краю. Более динамичный визуальный стиль."
+      buttonText="Присоединиться"
+      image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&h=1080&fit=crop"
+      overlay={true}
+      center={false}
+      position="left"
+      imageWidth={1920}
+      imageHeight={1080}
+    />
+
+    <!-- Example 5: With Modal Trigger -->
+    <Hero
+      title="Вариант 5: С Модальным Окном"
+      description="Кнопка открывает модальное окно вместо перехода по ссылке. Идеально для форм регистрации."
+      buttonText="Открыть Форму"
+      image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop"
+      modalId="test-modal"
+      position="right"
+      imageWidth={1200}
+      imageHeight={800}
+    />
+
+    <!-- Example 6: Different Image Sizes -->
+    <Hero
+      title="Вариант 6: Портретное Изображение"
+      description="Работает и с портретными изображениями благодаря адаптивной системе."
+      buttonText="Смотреть Демо"
+      image="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=1200&fit=crop"
+      href="#demo"
+      position="left"
+      imageWidth={800}
+      imageHeight={1200}
+    />
+
+    <!-- Example 7: Long Content -->
+    <Hero
+      title="Вариант 7: Длинный Заголовок с Множеством Деталей и Информации для Тестирования"
+      description="Очень длинное описание для проверки того, как компонент справляется с большим количеством текста. Это важно для тестирования адаптивности и читаемости на разных устройствах, особенно на мобильных телефонах и планшетах."
+      buttonText="Подробнее о Продукте"
+      image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=800&fit=crop"
+      href="#details"
+      imageWidth={1200}
+      imageHeight={800}
+    />
+
+    <!-- Example 8: Ultra Wide Image -->
+    <Hero
+      title="Вариант 8: Ультраш Изображение"
+      description="Тестирование с очень широким изображением для проверки адаптивности на мобильных устройствах."
+      buttonText="Проверить Адаптивность"
+      image="https://images.unsplash.com/photo-1497366216548-37526070297c?w=2400&h=800&fit=crop"
+      href="#responsive"
+      position="right"
+      imageWidth={2400}
+      imageHeight={800}
+    />
+  </div>
+
+  <!-- Mock Modal for Example 5 -->
+  <dialog id="test-modal" class="modal">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg">Тестовое Модальное Окно</h3>
+      <p class="py-4">Это модальное окно открывается из Hero компонента!</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn">Закрыть</button>
+        </form>
+      </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+</Layout>

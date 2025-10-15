@@ -1,0 +1,337 @@
+---
+/**
+ * Pricing Component Examples
+ */
+import { Pricing } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Classic 3-Tier Pricing -->
+    <Pricing
+      title="Вариант 1: Классические 3 Тарифа"
+      subtitle="Выберите Свой План"
+      theme="default"
+      plans={[
+        {
+          name: "Starter",
+          price: "$29",
+          period: "месяц",
+          description: "Для индивидуальных предпринимателей",
+          features: [
+            "До 1,000 пользователей",
+            "Базовая поддержка",
+            "5 GB хранилище",
+            "Email уведомления",
+          ],
+          buttonText: "Начать",
+          buttonHref: "#starter",
+        },
+        {
+          name: "Professional",
+          price: "$99",
+          period: "месяц",
+          description: "Для растущих команд",
+          features: [
+            "До 10,000 пользователей",
+            "Приоритетная поддержка 24/7",
+            "100 GB хранилище",
+            "Email + SMS уведомления",
+            "Продвинутая аналитика",
+            "API доступ",
+          ],
+          highlighted: true,
+          badge: "Популярный",
+          buttonText: "Попробовать Pro",
+          buttonHref: "#pro",
+        },
+        {
+          name: "Enterprise",
+          price: "$499",
+          period: "месяц",
+          description: "Для крупного бизнеса",
+          features: [
+            "Безлимитные пользователи",
+            "Персональный менеджер",
+            "Безлимитное хранилище",
+            "Все каналы уведомлений",
+            "Кастомные интеграции",
+            "SLA 99.9%",
+            "Белый лейбл",
+          ],
+          buttonText: "Связаться",
+          buttonHref: "#enterprise",
+        },
+      ]}
+    />
+
+    <!-- Example 2: Annual Pricing -->
+    <Pricing
+      title="Вариант 2: Годовая Подписка"
+      subtitle="Экономьте До 20%"
+      theme="gradient"
+      plans={[
+        {
+          name: "Basic Annual",
+          price: "$290",
+          period: "год",
+          description: "Экономия $58 в год",
+          features: [
+            "Все из Starter",
+            "2 месяца бесплатно",
+            "Приоритетный онбординг",
+          ],
+          buttonText: "Купить",
+          buttonHref: "#basic-annual",
+        },
+        {
+          name: "Pro Annual",
+          price: "$990",
+          period: "год",
+          description: "Экономия $198 в год",
+          features: [
+            "Все из Professional",
+            "2 месяца бесплатно",
+            "Бесплатная миграция",
+            "Обучение команды",
+          ],
+          highlighted: true,
+          badge: "Лучшая Цена",
+          buttonText: "Купить Pro",
+          buttonHref: "#pro-annual",
+        },
+        {
+          name: "Enterprise Annual",
+          price: "$4,990",
+          period: "год",
+          description: "Экономия $998 в год",
+          features: [
+            "Все из Enterprise",
+            "2 месяца бесплатно",
+            "Кастомная настройка",
+            "Dedicated инфраструктура",
+          ],
+          buttonText: "Обсудить",
+          buttonHref: "#enterprise-annual",
+        },
+      ]}
+    />
+
+    <!-- Example 3: Free + Paid Tiers -->
+    <Pricing
+      title="Вариант 3: Бесплатный + Платные Планы"
+      subtitle="Начните Бесплатно"
+      theme="dark"
+      plans={[
+        {
+          name: "Free",
+          price: "$0",
+          period: "навсегда",
+          description: "Идеально для тестирования",
+          features: [
+            "До 100 пользователей",
+            "Базовые функции",
+            "Community поддержка",
+            "1 GB хранилище",
+          ],
+          buttonText: "Начать Бесплатно",
+          buttonHref: "#free",
+        },
+        {
+          name: "Premium",
+          price: "$49",
+          period: "месяц",
+          description: "Для серьезного использования",
+          features: [
+            "До 5,000 пользователей",
+            "Все функции",
+            "Email поддержка",
+            "50 GB хранилище",
+            "Без рекламы",
+            "Экспорт данных",
+          ],
+          highlighted: true,
+          badge: "Рекомендуем",
+          buttonText: "Обновиться",
+          buttonHref: "#premium",
+        },
+        {
+          name: "Business",
+          price: "$199",
+          period: "месяц",
+          description: "Для команд и организаций",
+          features: [
+            "Безлимитные пользователи",
+            "Premium функции",
+            "Приоритетная поддержка",
+            "500 GB хранилище",
+            "SSO интеграция",
+            "Audit logs",
+            "HIPAA compliant",
+          ],
+          buttonText: "Связаться",
+          buttonHref: "#business",
+        },
+      ]}
+    />
+
+    <!-- Example 4: Pay-As-You-Go -->
+    <Pricing
+      title="Вариант 4: Гибкая Оплата"
+      subtitle="Платите Только За Использование"
+      theme="gradient"
+      plans={[
+        {
+          name: "Pay-As-You-Go",
+          price: "$0.01",
+          period: "за запрос",
+          description: "Без месячной платы",
+          features: [
+            "Никаких фиксированных затрат",
+            "Платите только за использование",
+            "Масштабируется автоматически",
+            "Базовая поддержка",
+            "Биллинг в конце месяца",
+          ],
+          buttonText: "Начать",
+          buttonHref: "#payg",
+        },
+        {
+          name: "Committed Use",
+          price: "$500",
+          period: "месяц",
+          description: "Включает 100,000 запросов",
+          features: [
+            "$0.005 за дополнительный запрос",
+            "Скидка 50% на превышение",
+            "Приоритетная поддержка",
+            "SLA 99.5%",
+            "Детальная аналитика",
+          ],
+          highlighted: true,
+          badge: "Выгодно",
+          buttonText: "Подключить",
+          buttonHref: "#committed",
+        },
+        {
+          name: "Enterprise Volume",
+          price: "Договорная",
+          description: "Для больших объемов",
+          features: [
+            "Кастомные цены от объема",
+            "Персональный менеджер",
+            "Dedicated инфраструктура",
+            "SLA 99.99%",
+            "Кастомные лимиты",
+            "Юридическая поддержка",
+          ],
+          buttonText: "Обсудить",
+          buttonHref: "#volume",
+        },
+      ]}
+    />
+
+    <!-- Example 5: Feature-Based Pricing -->
+    <Pricing
+      title="Вариант 5: По Функциям"
+      subtitle="Выберите Нужные Возможности"
+      theme="default"
+      plans={[
+        {
+          name: "Core",
+          price: "$39",
+          period: "месяц",
+          description: "Основные функции",
+          features: [
+            "✓ Базовый функционал",
+            "✓ Email поддержка",
+            "✓ 10 GB хранилище",
+            "✗ Аналитика",
+            "✗ Интеграции",
+            "✗ API",
+          ],
+          buttonText: "Выбрать Core",
+          buttonHref: "#core",
+        },
+        {
+          name: "Plus",
+          price: "$79",
+          period: "месяц",
+          description: "Core + Аналитика",
+          features: [
+            "✓ Все из Core",
+            "✓ Продвинутая аналитика",
+            "✓ 50 GB хранилище",
+            "✓ 10 интеграций",
+            "✗ API доступ",
+            "✗ White-label",
+          ],
+          highlighted: true,
+          badge: "Популярный",
+          buttonText: "Выбрать Plus",
+          buttonHref: "#plus",
+        },
+        {
+          name: "Ultimate",
+          price: "$149",
+          period: "месяц",
+          description: "Все включено",
+          features: [
+            "✓ Все из Plus",
+            "✓ Full API доступ",
+            "✓ Безлимитное хранилище",
+            "✓ Безлимитные интеграции",
+            "✓ White-label опция",
+            "✓ Priority support 24/7",
+          ],
+          buttonText: "Выбрать Ultimate",
+          buttonHref: "#ultimate",
+        },
+      ]}
+    />
+
+    <!-- Example 6: Two Plans Only -->
+    <Pricing
+      title="Вариант 6: Два Простых Плана"
+      subtitle="Просто и Понятно"
+      theme="gradient"
+      plans={[
+        {
+          name: "Personal",
+          price: "$19",
+          period: "месяц",
+          description: "Для личного использования",
+          features: [
+            "1 пользователь",
+            "10 проектов",
+            "5 GB хранилище",
+            "Email поддержка",
+            "Мобильное приложение",
+          ],
+          buttonText: "Начать Personal",
+          buttonHref: "#personal",
+        },
+        {
+          name: "Team",
+          price: "$99",
+          period: "месяц",
+          description: "Для команд любого размера",
+          features: [
+            "Безлимитные пользователи",
+            "Безлимитные проекты",
+            "100 GB хранилище",
+            "Priority поддержка 24/7",
+            "Все платформы",
+            "Командные инструменты",
+            "Расширенная безопасность",
+          ],
+          highlighted: true,
+          badge: "Команды",
+          buttonText: "Начать Team",
+          buttonHref: "#team",
+        },
+      ]}
+    />
+  </div>
+</Layout>

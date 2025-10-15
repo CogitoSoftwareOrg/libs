@@ -1,0 +1,160 @@
+---
+/**
+ * CTA Component Examples
+ */
+import { CTA } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Default Theme -->
+    <CTA
+      headline="Вариант 1: Стандартный Призыв"
+      subheadline="Присоединяйтесь к тысячам довольных клиентов. Начните бесплатно уже сегодня, без кредитной карты!"
+      buttonText="Начать Бесплатно"
+      buttonHref="https://example.com/signup"
+      theme="default"
+    />
+
+    <!-- Example 2: Gradient Theme -->
+    <CTA
+      headline="Вариант 2: С Градиентом"
+      subheadline="Трансформируйте свой бизнес с помощью AI. Получите доступ ко всем функциям на 14 дней бесплатно."
+      buttonText="Попробовать Premium 🚀"
+      buttonHref="#premium"
+      theme="gradient"
+    />
+
+    <!-- Example 3: Dark Theme -->
+    <CTA
+      headline="Вариант 3: Темная Тема"
+      subheadline="Революция в маркетинге начинается здесь. Автоматизируйте процессы и увеличьте продажи на 300%."
+      buttonText="Записаться на Демо"
+      buttonHref="#demo"
+      theme="dark"
+    />
+
+    <!-- Example 4: With Modal -->
+    <CTA
+      headline="Вариант 4: С Модальным Окном"
+      subheadline="Узнайте как наша платформа может помочь вашему бизнесу. Заполните короткую форму для консультации."
+      buttonText="Получить Консультацию"
+      modalId="consultation-modal"
+      theme="gradient"
+    />
+
+    <!-- Example 5: Short and Punchy -->
+    <CTA
+      headline="Готовы Начать?"
+      subheadline="Один клик до успеха"
+      buttonText="Вперед! →"
+      buttonHref="#start"
+      theme="default"
+    />
+
+    <!-- Example 6: Long Detailed -->
+    <CTA
+      headline="Пора Перейти на Следующий Уровень Автоматизации"
+      subheadline="Более 50,000 компаний по всему миру уже используют нашу платформу для автоматизации маркетинга, увеличения продаж и улучшения клиентского опыта. Присоединяйтесь к лидерам индустрии и начните свою трансформацию сегодня. Получите 14 дней бесплатного доступа ко всем Pro функциям без необходимости вводить данные кредитной карты."
+      buttonText="Начать Трансформацию Бизнеса"
+      buttonHref="#transform"
+      theme="gradient"
+    />
+
+    <!-- Example 7: Urgent -->
+    <CTA
+      headline="⚡ Специальное Предложение Заканчивается Сегодня!"
+      subheadline="Получите 50% скидку на годовую подписку Premium. Осталось всего 5 часов!"
+      buttonText="Активировать Скидку Сейчас"
+      buttonHref="#offer"
+      theme="gradient"
+    />
+
+    <!-- Example 8: Questions CTA -->
+    <CTA
+      headline="Остались Вопросы?"
+      subheadline="Наша команда готова помочь вам найти идеальное решение для вашего бизнеса. Свяжитесь с нами для персональной консультации."
+      buttonText="Связаться с Экспертом 💬"
+      buttonHref="mailto:support@example.com"
+      theme="default"
+    />
+
+    <!-- Example 9: Social Proof CTA -->
+    <CTA
+      headline="Присоединяйтесь к Лидерам Рынка"
+      subheadline="Google, Microsoft, Amazon и еще 10,000+ компаний доверяют нам. Станьте частью успешного сообщества."
+      buttonText="Начать Как Профи"
+      buttonHref="#enterprise"
+      theme="gradient"
+    />
+
+    <!-- Example 10: Risk-Free CTA -->
+    <CTA
+      headline="Попробуйте Без Риска"
+      subheadline="30-дневная гарантия возврата денег. Если не понравится - вернем 100% средств, никаких вопросов."
+      buttonText="Начать Безрисковый Тест"
+      buttonHref="#trial"
+      theme="default"
+    />
+  </div>
+
+  <!-- Mock Modal for Example 4 -->
+  <dialog id="consultation-modal" class="modal">
+    <div class="modal-box">
+      <h3 class="font-bold text-lg mb-4">Запрос на Консультацию</h3>
+      <form class="space-y-4">
+        <div>
+          <label class="label">
+            <span class="label-text">Ваше имя</span>
+          </label>
+          <input
+            type="text"
+            placeholder="Иван Иванов"
+            class="input input-bordered w-full"
+          />
+        </div>
+        <div>
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input
+            type="email"
+            placeholder="ivan@example.com"
+            class="input input-bordered w-full"
+          />
+        </div>
+        <div>
+          <label class="label">
+            <span class="label-text">Компания</span>
+          </label>
+          <input
+            type="text"
+            placeholder="ООО 'Рога и Копыта'"
+            class="input input-bordered w-full"
+          />
+        </div>
+        <div>
+          <label class="label">
+            <span class="label-text">Сообщение</span>
+          </label>
+          <textarea
+            class="textarea textarea-bordered w-full"
+            placeholder="Расскажите о ваших потребностях..."></textarea>
+        </div>
+        <div class="modal-action">
+          <button type="submit" class="btn btn-primary">Отправить</button>
+          <button
+            type="button"
+            class="btn"
+            onclick="document.getElementById('consultation-modal').close()"
+            >Закрыть</button
+          >
+        </div>
+      </form>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+</Layout>

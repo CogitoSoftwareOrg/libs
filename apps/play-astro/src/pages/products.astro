@@ -1,0 +1,151 @@
+---
+/**
+ * Examples of different Products component configurations
+ */
+import { Products } from "@cogisoft/ui-astro";
+
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4 p-8">
+    <h1 class="text-4xl font-bold text-center mb-8">
+      Products Component Examples
+    </h1>
+
+    <!-- Example 1: Only Modules (no featured) -->
+    <Products
+      title="Пример 1: Только Модули"
+      subtitle="Без выделенных секций"
+      theme="default"
+      modules={[
+        {
+          name: "Module A",
+          description: "Simple module without featured sections",
+          badge: "NEW",
+          href: "#module-a",
+        },
+        {
+          name: "Module B",
+          description: "Another regular module",
+          href: "#module-b",
+        },
+        {
+          name: "Module C",
+          description: "Third module in the list",
+          badge: "PRO",
+          href: "#module-c",
+        },
+      ]}
+    />
+
+    <!-- Example 2: Featured Top + Modules -->
+    <Products
+      title="Пример 2: Ключевой Модуль Сверху + Подмодули"
+      subtitle="Главный продукт с дополнительными модулями"
+      theme="gradient"
+      featuredTop={{
+        title: "Main Product",
+        description:
+          "This is the hero product that gets highlighted at the top",
+        image:
+          "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop",
+        href: "#main",
+        accentColor: "primary",
+      }}
+      modules={[
+        {
+          name: "Add-on 1",
+          description: "Complementary module to the main product",
+          href: "#addon-1",
+        },
+        {
+          name: "Add-on 2",
+          description: "Another supporting module",
+          href: "#addon-2",
+        },
+      ]}
+    />
+
+    <!-- Example 3: Modules + Featured Bottom -->
+    <Products
+      title="Пример 3: Модули + Инфраструктура Внизу"
+      subtitle="Отдельные продукты с общей платформой"
+      theme="dark"
+      modules={[
+        {
+          name: "Tool 1",
+          description: "Standalone tool",
+          badge: "AI",
+          href: "#tool-1",
+        },
+        {
+          name: "Tool 2",
+          description: "Another independent tool",
+          href: "#tool-2",
+        },
+        {
+          name: "Tool 3",
+          description: "Third tool in suite",
+          href: "#tool-3",
+        },
+      ]}
+      featuredBottom={{
+        title: "Enterprise Platform",
+        description: "All tools bundled together in one comprehensive platform",
+        image:
+          "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop",
+        href: "#enterprise",
+        accentColor: "secondary",
+      }}
+    />
+
+    <!-- Example 4: Featured Top + Modules + Featured Bottom -->
+    <Products
+      title="Пример 4: Полная Конфигурация"
+      subtitle="Главный продукт, модули и платформа"
+      theme="gradient"
+      imageWidth={1200}
+      imageHeight={800}
+      featuredTop={{
+        title: "Flagship Product",
+        description: "Our main AI-powered solution",
+        image:
+          "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop",
+        href: "#flagship",
+        accentColor: "primary",
+      }}
+      modules={[
+        {
+          name: "Extension A",
+          description: "Extends flagship functionality",
+          badge: "NEW",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+          href: "#ext-a",
+        },
+        {
+          name: "Extension B",
+          description: "Additional capabilities",
+          image:
+            "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+          href: "#ext-b",
+        },
+        {
+          name: "Extension C",
+          description: "More features",
+          badge: "PRO",
+          href: "#ext-c",
+        },
+      ]}
+      featuredBottom={{
+        title: "Complete Suite",
+        description: "Everything bundled in one enterprise-ready package",
+        image:
+          "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop",
+        href: "#suite",
+        accentColor: "accent",
+      }}
+    />
+  </div>
+</Layout>

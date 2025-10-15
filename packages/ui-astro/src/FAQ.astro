@@ -9,18 +9,35 @@ interface Props {
   subtitle?: string;
   questions: Question[];
   theme?: "default" | "dark" | "gradient";
+  collapseIcon?: "arrow" | "plus" | "none";
+  multipleOpen?: boolean;
 }
 
-const { title, subtitle, questions, theme = "default" } = Astro.props;
+const {
+  title,
+  subtitle,
+  questions,
+  theme = "default",
+  collapseIcon = "plus",
+  multipleOpen = true,
+} = Astro.props;
 
 const themeClasses = {
   default: "",
   dark: "bg-base-300",
   gradient: "bg-gradient-to-br from-info/5 to-secondary/5",
 };
+
+const collapseIconClass = {
+  arrow: "collapse-arrow",
+  plus: "collapse-plus",
+  none: "",
+};
 ---
 
-<section class={`faq-section w-full py-16 lg:py-24 ${themeClasses[theme]}`}>
+<section
+  class={`faq-section w-full py-16 lg:py-24 overflow-x-hidden ${themeClasses[theme]}`}
+>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="text-center mb-16 space-y-4">
@@ -44,8 +61,14 @@ const themeClasses = {
     >
       {
         questions.map((item, index) => (
-          <div class="collapse collapse-plus bg-base-100 border border-base-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-info/30">
-            <input type="radio" name="faq-accordion" id={`faq-${index}`} />
+          <div
+            class={`collapse ${collapseIconClass[collapseIcon]} bg-base-100 border border-base-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:border-info/30`}
+          >
+            <input
+              type={multipleOpen ? "checkbox" : "radio"}
+              name={multipleOpen ? undefined : "faq-accordion"}
+              id={`faq-${index}`}
+            />
             <label
               for={`faq-${index}`}
               class="collapse-title text-xl font-bold cursor-pointer"

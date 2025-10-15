@@ -1,0 +1,179 @@
+---
+/**
+ * Testimonials Component Examples
+ */
+import { Testimonials } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Default Theme -->
+    <Testimonials
+      title="Вариант 1: Стандартная Тема"
+      subtitle="Отзывы Клиентов"
+      theme="default"
+      testimonials={[
+        {
+          text: "Отличный продукт! Полностью решил нашу проблему и повысил эффективность работы команды.",
+          author: "Анна Смирнова",
+          role: "CEO, TechCorp",
+          rating: 5,
+        },
+        {
+          text: "Простой в использовании и очень функциональный. Рекомендую всем!",
+          author: "Иван Петров",
+          role: "Founder, StartupXYZ",
+          rating: 5,
+        },
+        {
+          text: "Техподдержка на высшем уровне. Отвечают мгновенно и решают любые вопросы.",
+          author: "Мария Кузнецова",
+          role: "Product Manager",
+          rating: 5,
+        },
+      ]}
+    />
+
+    <!-- Example 2: Gradient Theme -->
+    <Testimonials
+      title="Вариант 2: Градиентная Тема"
+      subtitle="Что Говорят О Нас"
+      theme="gradient"
+      testimonials={[
+        {
+          text: "За первый месяц использования мы увеличили продажи на 150%. Невероятные результаты!",
+          author: "Дмитрий Соколов",
+          role: "Sales Director, BigRetail",
+          rating: 5,
+        },
+        {
+          text: "Интеграция прошла гладко, никаких проблем. Все работает как часы.",
+          author: "Елена Волкова",
+          role: "CTO, FinTech Solutions",
+          rating: 5,
+        },
+      ]}
+    />
+
+    <!-- Example 3: Dark Theme -->
+    <Testimonials
+      title="Вариант 3: Темная Тема"
+      subtitle="Реальные Истории"
+      theme="dark"
+      testimonials={[
+        {
+          text: "Лучшее решение на рынке. Пробовали много аналогов, но это - номер один.",
+          author: "Сергей Новиков",
+          role: "Marketing Head",
+          rating: 5,
+        },
+        {
+          text: "Интуитивный интерфейс и мощный функционал. Именно то, что нужно для роста.",
+          author: "Ольга Морозова",
+          role: "Business Owner",
+          rating: 4,
+        },
+        {
+          text: "Отличное соотношение цены и качества. Очень доволен покупкой.",
+          author: "Алексей Федоров",
+          role: "Entrepreneur",
+          rating: 5,
+        },
+      ]}
+    />
+
+    <!-- Example 4: Many Testimonials (6) -->
+    <Testimonials
+      title="Вариант 4: Множество Отзывов"
+      subtitle="Более 1000 Довольных Клиентов"
+      theme="gradient"
+      testimonials={[
+        {
+          text: "Автоматизация на высшем уровне. Сэкономили 20 часов в неделю.",
+          author: "Павел Орлов",
+          role: "Operations Manager",
+          rating: 5,
+        },
+        {
+          text: "Команда профессионалов. Помогли с внедрением на каждом этапе.",
+          author: "Наталья Белова",
+          role: "HR Director",
+          rating: 5,
+        },
+        {
+          text: "ROI окупился за 2 месяца. Это просто фантастика!",
+          author: "Игорь Васильев",
+          role: "CFO, E-commerce",
+          rating: 5,
+        },
+        {
+          text: "Надежная система без сбоев. Работает 24/7 без проблем.",
+          author: "Татьяна Егорова",
+          role: "System Admin",
+          rating: 5,
+        },
+        {
+          text: "Аналитика просто супер! Видим все метрики в реальном времени.",
+          author: "Максим Королев",
+          role: "Data Analyst",
+          rating: 5,
+        },
+        {
+          text: "Лучшая инвестиция в бизнес за последние годы.",
+          author: "Юлия Романова",
+          role: "CEO, Digital Agency",
+          rating: 5,
+        },
+      ]}
+    />
+
+    <!-- Example 5: Different Ratings -->
+    <Testimonials
+      title="Вариант 5: Разные Рейтинги"
+      subtitle="Честные Отзывы"
+      theme="default"
+      testimonials={[
+        {
+          text: "Отличный продукт, но есть куда расти. В целом очень доволен.",
+          author: "Андрей Козлов",
+          role: "Product Owner",
+          rating: 4,
+        },
+        {
+          text: "Хорошее решение, но интерфейс можно улучшить.",
+          author: "Светлана Попова",
+          role: "UX Designer",
+          rating: 3,
+        },
+        {
+          text: "Идеально! Нет никаких замечаний. 10 из 10!",
+          author: "Владимир Лебедев",
+          role: "Tech Lead",
+          rating: 5,
+        },
+      ]}
+    />
+
+    <!-- Example 6: Long Testimonials -->
+    <Testimonials
+      title="Вариант 6: Подробные Отзывы"
+      subtitle="Детальные Истории Успеха"
+      theme="gradient"
+      testimonials={[
+        {
+          text: "Мы долго искали решение, которое бы полностью соответствовало нашим потребностям. Перепробовали множество вариантов, но все они имели свои недостатки. Этот продукт стал настоящим прорывом для нашей компании. За три месяца использования мы не только окупили все затраты, но и значительно улучшили показатели эффективности. Особенно хочу отметить качество технической поддержки - они всегда на связи и готовы помочь в любой ситуации.",
+          author: "Екатерина Семенова",
+          role: "Director of Operations, LogisticsPro",
+          rating: 5,
+        },
+        {
+          text: "Внедрение заняло всего неделю, что для нас было критически важно. Команда разработчиков оказала полную поддержку, помогла с интеграцией и обучила наших сотрудников. Результаты превзошли все ожидания!",
+          author: "Георгий Михайлов",
+          role: "IT Manager, Manufacturing Inc",
+          rating: 5,
+        },
+      ]}
+    />
+  </div>
+</Layout>

@@ -1,2 +1,5 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@source "../../node_modules/@cogisoft/ui-astro/src";
+@source "../../node_modules/@cogisoft/ui-svelte-daisy/dist";

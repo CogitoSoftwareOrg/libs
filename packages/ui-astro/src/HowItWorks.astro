@@ -34,7 +34,7 @@ const themeClasses = {
 ---
 
 <section
-  class={`how-it-works-section w-full py-16 lg:py-24 ${themeClasses[theme]}`}
+  class={`how-it-works-section w-full py-16 lg:py-24 overflow-x-hidden ${themeClasses[theme]}`}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
@@ -87,13 +87,13 @@ const themeClasses = {
                   </p>
 
                   {step.image && (
-                    <div class="mt-6">
+                    <div class="mt-6 overflow-hidden">
                       <Image
                         src={step.image}
                         alt={step.title}
                         width={imageWidth}
                         height={imageHeight}
-                        class="w-full h-80 md:h-96 object-cover rounded-xl shadow-lg border border-base-200 hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+                        class="w-full h-auto object-cover rounded-xl shadow-lg border border-base-200 hover:shadow-xl transition-all duration-300"
                         loading="lazy"
                         format="webp"
                       />

@@ -1,30 +1,246 @@
 ---
-import { Button, Modal, Dropdown } from "@cogisoft/ui-svelte-daisy";
-import { Hero } from "@cogisoft/ui-astro";
-
+/**
+ * Examples Index - Links to All Component Examples
+ */
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Button>Lib btn</Button>
+  <div class="min-h-screen bg-base-200 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-5xl font-bold mb-4">📚 Примеры Компонентов UI Astro</h1>
+        <p class="text-xl text-base-content/70">
+          Коллекция тестовых страниц для всех компонентов секций с различными
+          вариациями
+        </p>
+      </div>
 
-  <Modal open={true} cline:only>
-    <h1>Modal</h1>
-  </Modal>
+      <!-- Components Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Hero Examples -->
+        <a
+          href="/hero"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">🦸</span>
+              Hero
+            </h2>
+            <p class="text-base-content/70">
+              8 вариаций Hero секции с разными компоновками, наложениями и
+              изображениями
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-primary">8 примеров</span>
+            </div>
+          </div>
+        </a>
 
-  <Dropdown
-    options={[
-      { label: "Option 1", value: "option1" },
-      { label: "Option 2", value: "option2" },
-    ]}
-  >
-    <h1>fa</h1>
-  </Dropdown>
+        <!-- Testimonials Examples -->
+        <a
+          href="/testimonials"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">⭐</span>
+              Testimonials
+            </h2>
+            <p class="text-base-content/70">
+              6 вариаций отзывов клиентов с разными темами, рейтингами и
+              количеством
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-secondary">6 примеров</span>
+            </div>
+          </div>
+        </a>
 
-  <Hero
-    title="Hero"
-    description="Hero"
-    buttonText="Hero"
-    image="https://placehold.co/600x400"
-  />
+        <!-- Pricing Examples -->
+        <a
+          href="/pricing"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">💰</span>
+              Pricing
+            </h2>
+            <p class="text-base-content/70">
+              6 различных моделей ценообразования: от классических до гибких
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-accent">6 примеров</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Features Examples -->
+        <a
+          href="/features"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">✨</span>
+              Features
+            </h2>
+            <p class="text-base-content/70">
+              6 вариаций с разным количеством функций, метриками и статистикой
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-success">6 примеров</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Pains Examples -->
+        <a
+          href="/pains"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">⚠️</span>
+              Pains
+            </h2>
+            <p class="text-base-content/70">
+              6 наборов болевых точек для разных ниш: бизнес, маркетинг, продажи
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-warning">6 примеров</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- HowItWorks Examples -->
+        <a
+          href="/how-it-works"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">🔄</span>
+              How It Works
+            </h2>
+            <p class="text-base-content/70">
+              6 процессов: от простых 2-шаговых до детальных 6-шаговых
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-info">6 примеров</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- FAQ Examples -->
+        <a
+          href="/faq"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">❓</span>
+              FAQ
+            </h2>
+            <p class="text-base-content/70">
+              6 наборов вопросов: общие, по ценам, технические, безопасность
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-primary">6 примеров</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CTA Examples -->
+        <a
+          href="/cta"
+          class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">🎯</span>
+              CTA
+            </h2>
+            <p class="text-base-content/70">
+              10 призывов к действию: от простых до срочных предложений
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-secondary">10 примеров</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Full Landing Example -->
+        <a
+          href="/"
+          class="card bg-gradient-to-br from-primary/20 to-secondary/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-primary"
+        >
+          <div class="card-body">
+            <h2 class="card-title text-2xl">
+              <span class="text-3xl mr-2">🚀</span>
+              Полный Лендинг
+            </h2>
+            <p class="text-base-content/70">
+              Пример полноценной лендинг-страницы со всеми компонентами
+            </p>
+            <div class="card-actions justify-end mt-4">
+              <span class="badge badge-lg badge-primary">ДЕМО</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Info Section -->
+      <div class="mt-16 bg-base-100 rounded-2xl p-8 shadow-xl">
+        <h2 class="text-2xl font-bold mb-4">📱 Тестирование адаптивности</h2>
+        <div class="space-y-2 text-base-content/70">
+          <p>✅ Все компоненты протестированы на мобильной адаптивности</p>
+          <p>
+            ✅ Используется <code class="bg-base-200 px-2 py-1 rounded"
+              >overflow-x-hidden</code
+            > для предотвращения горизонтального скролла
+          </p>
+          <p>
+            ✅ Изображения адаптивные с <code
+              class="bg-base-200 px-2 py-1 rounded">w-full h-auto</code
+            >
+          </p>
+          <p>✅ Большие изображения (до 2400px) для стресс-тестирования</p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="mt-8 stats stats-vertical lg:stats-horizontal shadow w-full">
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <span class="text-4xl">📦</span>
+          </div>
+          <div class="stat-title">Всего Компонентов</div>
+          <div class="stat-value text-primary">8</div>
+          <div class="stat-desc">Готовых к использованию</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <span class="text-4xl">🎨</span>
+          </div>
+          <div class="stat-title">Всего Примеров</div>
+          <div class="stat-value text-secondary">54</div>
+          <div class="stat-desc">Различных вариаций</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-accent">
+            <span class="text-4xl">📱</span>
+          </div>
+          <div class="stat-title">Адаптивность</div>
+          <div class="stat-value text-accent">100%</div>
+          <div class="stat-desc">Без горизонтального скролла</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

@@ -1,0 +1,191 @@
+---
+/**
+ * Pains Component Examples
+ */
+import { Pains } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Business Pains -->
+    <Pains
+      title="Вариант 1: Бизнес Проблемы"
+      theme="default"
+      pains={[
+        {
+          title: "Потеря Времени",
+          description: "Тратите часы на рутинные задачи вместо развития?",
+          icon: "clock",
+        },
+        {
+          title: "Высокие Затраты",
+          description: "Бюджет на маркетинг растет, а результаты нет?",
+          icon: "credit-card",
+        },
+        {
+          title: "Низкая Эффективность",
+          description: "Команда работает много, но продуктивность низкая?",
+          icon: "chart-line",
+        },
+        {
+          title: "Отсутствие Контроля",
+          description: "Не знаете что происходит в компании?",
+          icon: "chart-mixed",
+        },
+      ]}
+    />
+
+    <!-- Example 2: Gradient Theme -->
+    <Pains
+      title="Вариант 2: С Градиентом"
+      theme="gradient"
+      pains={[
+        {
+          title: "Технические Сложности",
+          description:
+            "Устали от сложных систем, требующих технических знаний?",
+          icon: "code",
+        },
+        {
+          title: "Медленная Работа",
+          description: "Ваши инструменты тормозят и снижают продуктивность?",
+          icon: "turtle",
+        },
+        {
+          title: "Плохая Интеграция",
+          description: "Сервисы не работают вместе и создают хаос?",
+          icon: "plug",
+        },
+        {
+          title: "Отсутствие Поддержки",
+          description: "Никто не помогает когда возникают проблемы?",
+          icon: "headset",
+        },
+      ]}
+    />
+
+    <!-- Example 3: Dark Theme -->
+    <Pains
+      title="Вариант 3: Темная Тема"
+      theme="dark"
+      pains={[
+        {
+          title: "Потеря Данных",
+          description:
+            "Боитесь потерять важную информацию из-за ненадежных систем?",
+          icon: "database",
+        },
+        {
+          title: "Проблемы Безопасности",
+          description: "Переживаете за защиту конфиденциальных данных?",
+          icon: "shield",
+        },
+      ]}
+    />
+
+    <!-- Example 4: Marketing Pains -->
+    <Pains
+      title="Вариант 4: Проблемы Маркетинга"
+      theme="gradient"
+      pains={[
+        {
+          title: "Низкий ROI",
+          description: "Вкладываете в рекламу, но возврата не видите?",
+          icon: "chart-line",
+        },
+        {
+          title: "Нет Стратегии",
+          description: "Действуете хаотично без четкого плана?",
+          icon: "map",
+        },
+        {
+          title: "Слабая Аналитика",
+          description: "Не понимаете какие каналы работают?",
+          icon: "chart-mixed",
+        },
+        {
+          title: "Ручная Работа",
+          description: "Тратите время на то, что можно автоматизировать?",
+          icon: "hand",
+        },
+        {
+          title: "Низкая Конверсия",
+          description: "Трафик есть, а продаж нет?",
+          icon: "cart",
+        },
+        {
+          title: "Отток Клиентов",
+          description: "Клиенты уходят к конкурентам?",
+          icon: "users",
+        },
+      ]}
+    />
+
+    <!-- Example 5: Sales Pains -->
+    <Pains
+      title="Вариант 5: Проблемы Продаж"
+      theme="default"
+      pains={[
+        {
+          title: "Длинный Цикл Сделки",
+          description: "Сделки закрываются месяцами?",
+          icon: "clock",
+        },
+        {
+          title: "Потеря Лидов",
+          description: "Упускаете потенциальных клиентов?",
+          icon: "user-minus",
+        },
+        {
+          title: "Нет Автоматизации",
+          description: "Все процессы ведете вручную?",
+          icon: "robot",
+        },
+        {
+          title: "Отсутствие CRM",
+          description: "Храните клиентов в Excel таблицах?",
+          icon: "file",
+        },
+      ]}
+    />
+
+    <!-- Example 6: Productivity Pains -->
+    <Pains
+      title="Вариант 6: Проблемы Продуктивности"
+      theme="gradient"
+      pains={[
+        {
+          title: "Много Встреч",
+          description: "Весь день в совещаниях, нет времени на работу?",
+          icon: "calendar",
+        },
+        {
+          title: "Email Хаос",
+          description: "Тонете в почте и пропускаете важное?",
+          icon: "envelope",
+        },
+        {
+          title: "Отвлечения",
+          description: "Постоянно отвлекаетесь и теряете фокус?",
+          icon: "bell",
+        },
+        {
+          title: "Выгорание",
+          description: "Работаете 24/7 но результата нет?",
+          icon: "fire",
+        },
+        {
+          title: "Нет Приоритетов",
+          description: "Не знаете за что браться в первую очередь?",
+          icon: "list",
+        },
+        {
+          title: "Устаревшие Инструменты",
+          description: "Используете технологии из прошлого века?",
+          icon: "tools",
+        },
+      ]}
+    />
+  </div>
+</Layout>

@@ -27,7 +27,7 @@ const themeClasses = {
 ---
 
 <section
-  class={`cta-section w-full py-16 lg:py-24 ${themeClasses[theme]}`}
+  class={`cta-section w-full py-16 lg:py-24 overflow-x-hidden ${themeClasses[theme]}`}
   data-modal-id={modalId}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,10 +48,10 @@ const themeClasses = {
       </p>
 
       <!-- CTA Button -->
-      <div class="pt-8 px-12">
+      <div class="pt-8 px-4 sm:px-12">
         <Button
           target="_blank"
-          style="outline"
+          style="solid"
           href={buttonHref}
           size="xl"
           block
