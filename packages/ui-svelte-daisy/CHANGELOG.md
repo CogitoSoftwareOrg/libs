@@ -1,5 +1,11 @@
 # @cogisoft/ui-svelte-daisy
 
+## 0.1.13
+
+### Patch Changes
+
+- 540d4b5: Button target default = undefined
+
 ## 0.1.12
 
 ### Patch Changes
