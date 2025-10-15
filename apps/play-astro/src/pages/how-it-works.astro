@@ -1,0 +1,231 @@
+---
+/**
+ * HowItWorks Component Examples
+ */
+import { HowItWorks } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Classic 3 Steps -->
+    <HowItWorks
+      title="Вариант 1: Классические 3 Шага"
+      subtitle="Простой Процесс"
+      theme="default"
+      steps={[
+        {
+          number: 1,
+          title: "Регистрация",
+          description: "Создайте аккаунт за 2 минуты - никаких кредитных карт",
+          image:
+            "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 2,
+          title: "Настройка",
+          description: "Подключите нужные инструменты и настройте под себя",
+          image:
+            "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 3,
+          title: "Запуск",
+          description: "Начните работать и получайте результаты",
+          image:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=900&fit=crop",
+        },
+      ]}
+    />
+
+    <!-- Example 2: Detailed 5 Steps -->
+    <HowItWorks
+      title="Вариант 2: Детальный Процесс (5 Шагов)"
+      subtitle="Пошаговое Руководство"
+      theme="gradient"
+      imageWidth={1200}
+      imageHeight={900}
+      steps={[
+        {
+          number: 1,
+          title: "Консультация",
+          description:
+            "Свяжитесь с нами для бесплатной консультации и оценки потребностей",
+          image:
+            "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 2,
+          title: "Планирование",
+          description: "Разработаем индивидуальную стратегию и план внедрения",
+          image:
+            "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 3,
+          title: "Настройка",
+          description: "Настроим систему под ваши требования и бизнес-процессы",
+          image:
+            "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 4,
+          title: "Обучение",
+          description: "Проведем обучение вашей команды работе с платформой",
+          image:
+            "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 5,
+          title: "Запуск и Поддержка",
+          description:
+            "Запустим систему в работу и обеспечим непрерывную поддержку",
+          image:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=900&fit=crop",
+        },
+      ]}
+    />
+
+    <!-- Example 3: Without Images -->
+    <HowItWorks
+      title="Вариант 3: Без Изображений"
+      subtitle="Фокус на Содержание"
+      theme="dark"
+      steps={[
+        {
+          number: 1,
+          title: "Анализ",
+          description:
+            "Проводим глубокий анализ текущей ситуации и выявляем точки роста",
+        },
+        {
+          number: 2,
+          title: "Стратегия",
+          description: "Разрабатываем стратегию оптимизации и достижения целей",
+        },
+        {
+          number: 3,
+          title: "Внедрение",
+          description: "Поэтапно внедряем решения с минимальным риском",
+        },
+        {
+          number: 4,
+          title: "Оптимизация",
+          description:
+            "Постоянно улучшаем процессы на основе данных и обратной связи",
+        },
+      ]}
+    />
+
+    <!-- Example 4: Quick Start -->
+    <HowItWorks
+      title="Вариант 4: Быстрый Старт"
+      subtitle="От Идеи до Результата"
+      theme="gradient"
+      steps={[
+        {
+          number: 1,
+          title: "Зарегистрируйтесь",
+          description: "Заполните простую форму - это займет 60 секунд",
+          image:
+            "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 2,
+          title: "Начните Работу",
+          description:
+            "Сразу после регистрации получите доступ ко всем функциям",
+          image:
+            "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=900&fit=crop",
+        },
+      ]}
+    />
+
+    <!-- Example 5: Sales Funnel -->
+    <HowItWorks
+      title="Вариант 5: Воронка Продаж"
+      subtitle="Путь Клиента"
+      theme="default"
+      imageWidth={1200}
+      imageHeight={900}
+      steps={[
+        {
+          number: 1,
+          title: "Привлечение",
+          description:
+            "Клиент узнает о вас через рекламу, SEO или рекомендации",
+          image:
+            "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 2,
+          title: "Интерес",
+          description:
+            "Заинтересованный посетитель изучает ваш продукт и решение",
+          image:
+            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 3,
+          title: "Решение",
+          description: "Клиент принимает решение о покупке и оформляет заказ",
+          image:
+            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 4,
+          title: "Действие",
+          description: "Совершает покупку и становится вашим клиентом",
+          image:
+            "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=900&fit=crop",
+        },
+        {
+          number: 5,
+          title: "Удержание",
+          description: "Получает ценность и становится постоянным клиентом",
+          image:
+            "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=900&fit=crop",
+        },
+      ]}
+    />
+
+    <!-- Example 6: Development Process -->
+    <HowItWorks
+      title="Вариант 6: Процесс Разработки"
+      subtitle="Agile Методология"
+      theme="gradient"
+      steps={[
+        {
+          number: 1,
+          title: "Планирование",
+          description: "Определяем требования и приоритеты для спринта",
+        },
+        {
+          number: 2,
+          title: "Дизайн",
+          description: "Создаем UX/UI дизайн и прототипы",
+        },
+        {
+          number: 3,
+          title: "Разработка",
+          description: "Пишем код и создаем функциональность",
+        },
+        {
+          number: 4,
+          title: "Тестирование",
+          description: "Тщательно проверяем качество и исправляем баги",
+        },
+        {
+          number: 5,
+          title: "Деплой",
+          description: "Выкатываем обновление в продакшн",
+        },
+        {
+          number: 6,
+          title: "Ретроспектива",
+          description: "Анализируем результаты и планируем улучшения",
+        },
+      ]}
+    />
+  </div>
+</Layout>

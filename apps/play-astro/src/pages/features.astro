@@ -1,0 +1,300 @@
+---
+/**
+ * Features Component Examples
+ */
+import { Features } from "@cogisoft/ui-astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="space-y-4">
+    <!-- Example 1: Standard Features Grid -->
+    <Features
+      title="Вариант 1: Стандартная Сетка"
+      subtitle="Наши Возможности"
+      theme="default"
+      features={[
+        {
+          title: "Быстрая Работа",
+          description: "Молниеносная скорость обработки данных",
+          icon: "bolt",
+        },
+        {
+          title: "Безопасность",
+          description: "Шифрование банковского уровня",
+          icon: "shield-check",
+        },
+        {
+          title: "Масштабируемость",
+          description: "Растет вместе с вашим бизнесом",
+          icon: "chart-line",
+        },
+        {
+          title: "24/7 Поддержка",
+          description: "Всегда на связи когда нужно",
+          icon: "headset",
+        },
+        {
+          title: "API Интеграция",
+          description: "Простое подключение к любым сервисам",
+          icon: "plug",
+        },
+        {
+          title: "Аналитика",
+          description: "Детальные отчеты и инсайты",
+          icon: "chart-mixed",
+        },
+      ]}
+    />
+
+    <!-- Example 2: Features with Impact Metrics -->
+    <Features
+      title="Вариант 2: С Метриками Эффекта"
+      subtitle="Измеримые Результаты"
+      theme="gradient"
+      features={[
+        {
+          title: "AI Автоматизация",
+          description: "Искусственный интеллект для автоматизации рутины",
+          icon: "robot",
+          impact: {
+            metric: "Экономия времени",
+            value: "85%",
+            unit: "",
+          },
+        },
+        {
+          title: "Скорость Обработки",
+          description: "Обрабатываем запросы мгновенно",
+          icon: "bolt",
+          impact: {
+            metric: "Скорость",
+            value: "100x",
+            unit: "быстрее",
+          },
+        },
+        {
+          title: "Конверсия",
+          description: "Увеличиваем продажи с помощью умных алгоритмов",
+          icon: "chart-line",
+          impact: {
+            metric: "Рост",
+            value: "+250%",
+            unit: "",
+          },
+        },
+        {
+          title: "Надежность",
+          description: "Гарантированная доступность сервиса",
+          icon: "shield-check",
+          impact: {
+            metric: "Uptime",
+            value: "99.9%",
+            unit: "",
+          },
+        },
+        {
+          title: "Экономия Затрат",
+          description: "Снижаем операционные расходы",
+          icon: "credit-card",
+          impact: {
+            metric: "Экономия",
+            value: "60%",
+            unit: "затрат",
+          },
+        },
+        {
+          title: "Удовлетворенность",
+          description: "Клиенты довольны результатами",
+          icon: "star",
+          impact: {
+            metric: "Рейтинг",
+            value: "4.9",
+            unit: "/5",
+          },
+        },
+      ]}
+    />
+
+    <!-- Example 3: Features with Statistics -->
+    <Features
+      title="Вариант 3: С Общей Статистикой"
+      subtitle="Проверенные Возможности"
+      theme="dark"
+      features={[
+        {
+          title: "Облачное Хранилище",
+          description: "Безопасное хранение данных в облаке",
+          icon: "cloud",
+        },
+        {
+          title: "Мобильное Приложение",
+          description: "Работайте где угодно с любого устройства",
+          icon: "mobile",
+        },
+        {
+          title: "Командная Работа",
+          description: "Совместная работа в реальном времени",
+          icon: "users",
+        },
+      ]}
+      stats={{
+        total: "1M+",
+        label: "Активных Пользователей",
+        description: "Нам доверяют компании по всему миру",
+      }}
+    />
+
+    <!-- Example 4: Many Features (9) -->
+    <Features
+      title="Вариант 4: Расширенный Набор"
+      subtitle="Все Что Вам Нужно"
+      theme="gradient"
+      features={[
+        {
+          title: "Умный Dashboard",
+          description: "Вся информация в одном месте",
+          icon: "grid",
+        },
+        {
+          title: "Автоматические Отчеты",
+          description: "Генерация отчетов без усилий",
+          icon: "file-chart",
+        },
+        {
+          title: "Email Кампании",
+          description: "Мощные инструменты email-маркетинга",
+          icon: "envelope",
+        },
+        {
+          title: "CRM Интеграция",
+          description: "Подключение к популярным CRM",
+          icon: "plug",
+        },
+        {
+          title: "A/B Тестирование",
+          description: "Оптимизация на основе данных",
+          icon: "flask",
+        },
+        {
+          title: "Персонализация",
+          description: "Индивидуальный подход к каждому",
+          icon: "user",
+        },
+        {
+          title: "Геолокация",
+          description: "Таргетинг по местоположению",
+          icon: "location",
+        },
+        {
+          title: "Webhooks",
+          description: "События в реальном времени",
+          icon: "webhook",
+        },
+        {
+          title: "Резервное Копирование",
+          description: "Автоматические бэкапы данных",
+          icon: "database",
+        },
+      ]}
+      stats={{
+        total: "500K+",
+        label: "Довольных Клиентов",
+        description: "Присоединяйтесь к успешным компаниям",
+      }}
+    />
+
+    <!-- Example 5: Tech Features -->
+    <Features
+      title="Вариант 5: Технические Возможности"
+      subtitle="Для Разработчиков"
+      theme="default"
+      features={[
+        {
+          title: "RESTful API",
+          description: "Полнофункциональный REST API для интеграций",
+          icon: "code",
+          impact: {
+            metric: "Endpoints",
+            value: "100+",
+            unit: "",
+          },
+        },
+        {
+          title: "GraphQL",
+          description: "Гибкие запросы с GraphQL",
+          icon: "graph",
+        },
+        {
+          title: "SDK Libraries",
+          description: "Готовые библиотеки для всех языков",
+          icon: "book",
+        },
+        {
+          title: "Webhooks",
+          description: "События в реальном времени",
+          icon: "webhook",
+          impact: {
+            metric: "Latency",
+            value: "<100",
+            unit: "ms",
+          },
+        },
+        {
+          title: "Documentation",
+          description: "Подробная документация и примеры",
+          icon: "file-doc",
+        },
+        {
+          title: "Sandbox",
+          description: "Тестовая среда для разработки",
+          icon: "flask",
+        },
+      ]}
+    />
+
+    <!-- Example 6: Simple 3 Features -->
+    <Features
+      title="Вариант 6: Минималистичный"
+      subtitle="Ключевые Преимущества"
+      theme="gradient"
+      features={[
+        {
+          title: "Просто",
+          description: "Интуитивно понятный интерфейс, не требующий обучения",
+          icon: "check",
+          impact: {
+            metric: "Онбординг",
+            value: "5",
+            unit: "минут",
+          },
+        },
+        {
+          title: "Быстро",
+          description: "Молниеносная скорость работы на любых устройствах",
+          icon: "bolt",
+          impact: {
+            metric: "Загрузка",
+            value: "<2",
+            unit: "сек",
+          },
+        },
+        {
+          title: "Надежно",
+          description: "Гарантированная стабильность и безопасность",
+          icon: "shield-check",
+          impact: {
+            metric: "Uptime",
+            value: "99.99%",
+            unit: "",
+          },
+        },
+      ]}
+      stats={{
+        total: "10,000+",
+        label: "Успешных Внедрений",
+        description: "За последний год",
+      }}
+    />
+  </div>
+</Layout>

@@ -1,4 +1,23 @@
 ---
+/**
+ * Products Section Component
+ * 
+ * Flexible component for displaying product modules with optional featured sections.
+ * 
+ * Usage Examples:
+ * 
+ * 1. Only modules (no featured):
+ *    <Products title="Our Products" modules={[...]} />
+ * 
+ * 2. Featured top + modules:
+ *    <Products title="Products" featuredTop={{...}} modules={[...]} />
+ * 
+ * 3. Modules + featured bottom:
+ *    <Products title="Products" modules={[...]} featuredBottom={{...}} />
+ * 
+ * 4. Featured top + modules + featured bottom:
+ *    <Products title="Products" featuredTop={{...}} modules={[...]} featuredBottom={{...}} />
+ */
 import { Image } from "astro:assets";
 
 interface Module {
@@ -9,22 +28,20 @@ interface Module {
   href?: string;
 }
 
+interface FeaturedModule {
+  title: string;
+  description: string;
+  image?: string;
+  href?: string;
+  accentColor?: "primary" | "secondary" | "accent" | "info" | "success";
+}
+
 interface Props {
   title: string;
   subtitle?: string;
-  oracle: {
-    title: string;
-    description: string;
-    image?: string;
-    href?: string;
-  };
   modules: Module[];
-  pantheon: {
-    title: string;
-    description: string;
-    image?: string;
-    href?: string;
-  };
+  featuredTop?: FeaturedModule;
+  featuredBottom?: FeaturedModule;
   theme?: "default" | "dark" | "gradient";
   imageWidth?: number;
   imageHeight?: number;
@@ -33,9 +50,9 @@ interface Props {
 const {
   title,
   subtitle,
-  oracle,
   modules,
-  pantheon,
+  featuredTop,
+  featuredBottom,
   theme = "default",
   imageWidth = 800,
   imageHeight = 600,
@@ -49,7 +66,7 @@ const themeClasses = {
 ---
 
 <section
-  class={`products-section w-full py-16 lg:py-24 ${themeClasses[theme]}`}
+  class={`products-section w-full py-16 lg:py-24 overflow-x-hidden ${themeClasses[theme]}`}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
@@ -67,39 +84,47 @@ const themeClasses = {
       </h2>
     </div>
 
-    <!-- Oracle Section -->
-    <div
-      class="transition-all duration-700 ease-out mb-16 opacity-0 translate-y-8"
-      data-animate="oracle"
-    >
-      <div class="max-w-4xl mx-auto">
-        <a href={oracle.href} target="_blank" class="block no-underline">
-          <div
-            class="group card bg-base-100 border border-base-200 shadow-xl transition-all duration-200 hover:shadow-2xl hover:border-primary/60 hover:-translate-y-1 cursor-pointer no-underline"
-          >
-            {oracle.image && (
-              <figure class="px-4 pt-4">
-                <Image
-                  src={oracle.image}
-                  alt={oracle.title}
-                  width={imageWidth}
-                  height={imageHeight}
-                  class="rounded-xl h-84 w-full object-cover object-top mx-auto"
-                  loading="lazy"
-                  format="webp"
-                />
-              </figure>
-            )}
-            <div class="card-body items-center text-center">
-              <h3 class="card-title text-3xl">{oracle.title}</h3>
-              <p class="text-lg text-base-content/80">
-                {oracle.description}
-              </p>
-            </div>
+    <!-- Featured Top Section -->
+    {
+      featuredTop && (
+        <div
+          class="transition-all duration-700 ease-out mb-16 opacity-0 translate-y-8"
+          data-animate="featured-top"
+        >
+          <div class="max-w-4xl mx-auto">
+            <a
+              href={featuredTop.href}
+              target="_blank"
+              class="block no-underline"
+            >
+              <div
+                class={`group card bg-base-100 border border-base-200 shadow-xl transition-all duration-200 hover:shadow-2xl hover:border-${featuredTop.accentColor || "primary"}/60 hover:-translate-y-1 cursor-pointer no-underline`}
+              >
+                {featuredTop.image && (
+                  <figure class="px-4 pt-4">
+                    <Image
+                      src={featuredTop.image}
+                      alt={featuredTop.title}
+                      width={imageWidth}
+                      height={imageHeight}
+                      class="rounded-xl w-full h-auto max-h-84 object-cover object-top mx-auto"
+                      loading="lazy"
+                      format="webp"
+                    />
+                  </figure>
+                )}
+                <div class="card-body items-center text-center">
+                  <h3 class="card-title text-3xl">{featuredTop.title}</h3>
+                  <p class="text-lg text-base-content/80">
+                    {featuredTop.description}
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
+        </div>
+      )
+    }
 
     <!-- Modules Section -->
     <div class="mb-16">
@@ -142,7 +167,7 @@ const themeClasses = {
                           alt={module.name}
                           width={imageWidth}
                           height={imageHeight}
-                          class="rounded-xl h-84 w-full object-cover object-top mx-auto"
+                          class="rounded-xl w-full h-auto max-h-84 object-cover object-top mx-auto"
                           loading="lazy"
                           format="webp"
                         />
@@ -162,40 +187,48 @@ const themeClasses = {
       </div>
     </div>
 
-    <!-- Pantheon Section -->
-    <div
-      class="transition-all duration-700 ease-out opacity-0 translate-y-8"
-      data-animate="pantheon"
-      style="transition-delay: 600ms"
-    >
-      <div class="max-w-4xl mx-auto">
-        <a href={pantheon.href} target="_blank" class="block no-underline">
-          <div
-            class="group card bg-base-100 border border-base-200 shadow-xl transition-all duration-200 hover:shadow-2xl hover:border-secondary/60 hover:-translate-y-1 cursor-pointer no-underline"
-          >
-            {pantheon.image && (
-              <figure class="px-4 pt-4">
-                <Image
-                  src={pantheon.image}
-                  alt={pantheon.title}
-                  width={imageWidth}
-                  height={imageHeight}
-                  class="rounded-xl h-84 w-full object-cover object-top mx-auto"
-                  loading="lazy"
-                  format="webp"
-                />
-              </figure>
-            )}
-            <div class="card-body items-center text-center">
-              <h3 class="card-title text-3xl">{pantheon.title}</h3>
-              <p class="text-lg text-base-content/80">
-                {pantheon.description}
-              </p>
-            </div>
+    <!-- Featured Bottom Section -->
+    {
+      featuredBottom && (
+        <div
+          class="transition-all duration-700 ease-out opacity-0 translate-y-8"
+          data-animate="featured-bottom"
+          style="transition-delay: 600ms"
+        >
+          <div class="max-w-4xl mx-auto">
+            <a
+              href={featuredBottom.href}
+              target="_blank"
+              class="block no-underline"
+            >
+              <div
+                class={`group card bg-base-100 border border-base-200 shadow-xl transition-all duration-200 hover:shadow-2xl hover:border-${featuredBottom.accentColor || "secondary"}/60 hover:-translate-y-1 cursor-pointer no-underline`}
+              >
+                {featuredBottom.image && (
+                  <figure class="px-4 pt-4">
+                    <Image
+                      src={featuredBottom.image}
+                      alt={featuredBottom.title}
+                      width={imageWidth}
+                      height={imageHeight}
+                      class="rounded-xl w-full h-auto max-h-84 object-cover object-top mx-auto"
+                      loading="lazy"
+                      format="webp"
+                    />
+                  </figure>
+                )}
+                <div class="card-body items-center text-center">
+                  <h3 class="card-title text-3xl">{featuredBottom.title}</h3>
+                  <p class="text-lg text-base-content/80">
+                    {featuredBottom.description}
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-    </div>
+        </div>
+      )
+    }
   </div>
 </section>
 

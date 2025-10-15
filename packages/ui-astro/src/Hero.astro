@@ -40,14 +40,14 @@ const positionClasses = {
 ---
 
 <section
-  class={`hero min-h-screen relative ${!overlay ? "bg-base-200" : ""}`}
+  class={`hero min-h-screen relative overflow-x-hidden ${!overlay ? "bg-base-200" : ""}`}
   style={overlay && image ? `background-image: url(${image});` : ""}
   data-modal-id={modalId}
 >
   {overlay && image && <div class="hero-overlay" />}
 
   <div
-    class={`hero-content flex-col gap-6 ${positionClasses[position]} ${overlay && center ? "text-center" : ""} ${overlay ? "text-neutral-content" : ""}`}
+    class={`hero-content flex-col gap-6 w-full ${positionClasses[position]} ${overlay && center ? "text-center" : ""} ${overlay ? "text-neutral-content" : ""}`}
   >
     {
       image && !overlay && (
@@ -56,7 +56,7 @@ const positionClasses = {
           alt={title}
           width={imageWidth}
           height={imageHeight}
-          class="max-w-sm rounded-2xl shadow-2xl"
+          class="w-full max-w-sm rounded-2xl shadow-2xl"
           loading="eager"
           format="webp"
         />
