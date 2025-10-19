@@ -20,6 +20,7 @@
 
 		transition?: boolean;
 		id?: string;
+		fullHeight?: boolean;
 	}
 
 	let {
@@ -32,7 +33,8 @@
 		backdrop = false,
 		noPadding = false,
 		transparent = false,
-		id
+		id,
+		fullHeight = false
 	}: Props = $props();
 
 	let dialogElement: HTMLDialogElement | null = $state(null);
@@ -82,7 +84,13 @@
 				</Button>
 			</div>
 
-			<div class={['max-h-[calc(100vh-8rem)] overflow-y-auto', !noPadding && 'pr-2']}>
+			<div
+				class={[
+					'overflow-y-auto',
+					fullHeight ? 'max-h-full' : 'max-h-[calc(100vh-8rem)]',
+					!noPadding && 'pr-2'
+				]}
+			>
 				{@render children()}
 			</div>
 		</div>
