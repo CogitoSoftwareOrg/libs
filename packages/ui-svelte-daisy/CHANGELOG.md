@@ -1,5 +1,11 @@
 # @cogisoft/ui-svelte-daisy
 
+## 0.1.15
+
+### Patch Changes
+
+- 1761d12: Modal full-height mode
+
 ## 0.1.14
 
 ### Patch Changes
