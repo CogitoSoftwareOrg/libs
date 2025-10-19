@@ -76,13 +76,15 @@
 		class={['modal', placementClass]}
 	>
 		<div class={['modal-box relative', noPadding && 'p-0', className]}>
-			<div class="absolute right-2 top-2">
+			<div class="absolute right-2 top-2 z-50">
 				<Button color="neutral" style="ghost" onclick={handleClose} circle>
 					<X size={24} />
 				</Button>
 			</div>
 
-			{@render children()}
+			<div class={['max-h-[calc(100vh-8rem)] overflow-y-auto', !noPadding && 'pr-2']}>
+				{@render children()}
+			</div>
 		</div>
 
 		{#if backdrop}

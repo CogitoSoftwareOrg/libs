@@ -9,6 +9,7 @@
 		ghost?: boolean;
 		required?: boolean;
 		name?: string;
+		id?: string;
 		color?:
 			| 'primary'
 			| 'secondary'
@@ -38,6 +39,7 @@
 		ghost = false,
 		required = false,
 		name,
+		id,
 		color = 'neutral',
 		size = 'md',
 		type = 'text',
@@ -98,6 +100,7 @@
 
 		<input
 			class="grow outline-none ring-0"
+			{id}
 			{name}
 			{type}
 			{required}
