@@ -1,5 +1,11 @@
 # @cogisoft/ui-svelte-daisy
 
+## 0.1.14
+
+### Patch Changes
+
+- 41641ba: Modal ui-svelte-daisy works correct with scrollable content
+
 ## 0.1.13
 
 ### Patch Changes

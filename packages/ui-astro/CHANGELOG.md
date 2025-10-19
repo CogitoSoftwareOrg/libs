@@ -1,5 +1,13 @@
 # @cogisoft/ui-astro
 
+## 0.1.16
+
+### Patch Changes
+
+- 41641ba: Modal ui-svelte-daisy works correct with scrollable content
+- Updated dependencies [41641ba]
+  - @cogisoft/ui-svelte-daisy@0.1.14
+
 ## 0.1.15
 
 ### Patch Changes
