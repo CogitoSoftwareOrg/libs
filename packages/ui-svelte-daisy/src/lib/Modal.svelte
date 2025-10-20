@@ -87,7 +87,7 @@
 			<div
 				class={[
 					'overflow-y-auto',
-					fullHeight ? 'max-h-full' : 'max-h-[calc(100vh-8rem)]',
+					fullHeight ? 'max-h-screen' : 'max-h-[calc(100vh-8rem)]',
 					!noPadding && 'pr-2'
 				]}
 			>
