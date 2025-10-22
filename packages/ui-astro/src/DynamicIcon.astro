@@ -46,6 +46,11 @@ import FileSpreadsheet from "@lucide/astro/icons/file-spreadsheet";
 import Map from "@lucide/astro/icons/map";
 import Hand from "@lucide/astro/icons/hand";
 import Shield from "@lucide/astro/icons/shield";
+import BookOpenText from "@lucide/astro/icons/book-open-text";
+import FileStack from "@lucide/astro/icons/file-stack";
+import MessageCircleX from "@lucide/astro/icons/message-circle-x";
+import Frown from "@lucide/astro/icons/frown";
+
 
 interface Props {
   name: string;
@@ -104,6 +109,11 @@ const iconMap: Record<string, any> = {
   map: Map,
   hand: Hand,
   shield: Shield,
+  "book-open-text": BookOpenText,
+  "file-stack": FileStack,
+  "message-circle-x": MessageCircleX,
+  "frown": Frown,
+
 };
 
 const IconComponent = iconMap[name];
