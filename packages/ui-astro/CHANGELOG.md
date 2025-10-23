@@ -1,5 +1,12 @@
 # @cogisoft/ui-astro
 
+## 0.1.19
+
+### Patch Changes
+
+- c1244a1: new icons
+- c1244a1: landing option for quizbee
+
 ## 0.1.18
 
 ### Patch Changes
