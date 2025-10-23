@@ -1,5 +1,11 @@
 # @cogisoft/ui-astro
 
+## 0.1.22
+
+### Patch Changes
+
+- a37757a: minor
+
 ## 0.1.21
 
 ### Patch Changes
