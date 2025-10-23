@@ -1,5 +1,11 @@
 # @cogisoft/ui-astro
 
+## 0.1.20
+
+### Patch Changes
+
+- 332afa4: colors fixed
+
 ## 0.1.19
 
 ### Patch Changes
