@@ -1,5 +1,11 @@
 # @cogisoft/ui-astro
 
+## 0.1.21
+
+### Patch Changes
+
+- 71e8923: center for text, buttons
+
 ## 0.1.20
 
 ### Patch Changes
