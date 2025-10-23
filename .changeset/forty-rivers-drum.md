@@ -1,5 +1,5 @@
 ---
-"@cogisoft/ui-astro": minor
+"@cogisoft/ui-astro": patch
 ---
 
 new icons
