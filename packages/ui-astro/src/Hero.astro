@@ -20,6 +20,9 @@ interface Props {
   textWidth?: string;
   badge?: string;
   titleHighlight?: string;
+  titleAlign?: "left" | "center" | "right";
+  descriptionAlign?: "left" | "center" | "right";
+  footerAlign?: "left" | "center" | "right";
   secondaryButtonText?: string;
   secondaryButtonHref?: string;
   footerText?: string;
@@ -44,6 +47,9 @@ const {
   textWidth = "max-w-xs",
   badge,
   titleHighlight,
+  titleAlign = "left",
+  descriptionAlign = "left",
+  footerAlign = "left",
   secondaryButtonText,
   secondaryButtonHref,
   footerText,
@@ -60,6 +66,17 @@ const verticalAlignClasses = {
   start: "items-start",
   center: "items-center",
   end: "items-end",
+};
+
+const alignToClass = (align: "left" | "center" | "right") => {
+  switch (align) {
+    case "center":
+      return "text-center";
+    case "right":
+      return "text-right";
+    default:
+      return "text-left";
+  }
 };
 ---
 
@@ -97,7 +114,7 @@ const verticalAlignClasses = {
       )}
       
       <h1
-        class={`${titleSize} font-bold ${titleHighlight ? "" : "bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"}`}
+        class={`${titleSize} font-bold ${titleHighlight ? "" : "bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"} ${alignToClass(titleAlign)}`}
       >
         {titleHighlight ? (
           <>
@@ -112,7 +129,7 @@ const verticalAlignClasses = {
         )}
       </h1>
       
-      <p class={`${descriptionSize} font-semibold text-shadow-lg`}>
+      <p class={`${descriptionSize} font-semibold text-shadow-lg ${alignToClass(descriptionAlign)}`}>
         {description}
       </p>
       
@@ -135,7 +152,7 @@ const verticalAlignClasses = {
       </div>
       
       {footerText && (
-        <p class="text-sm pt-4">
+        <p class={`text-sm pt-4 ${alignToClass(footerAlign)}`}>
           {footerText}
         </p>
       )}
