@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm -r --filter ./packages/** run build",
+    "build": "pnpm -r --filter ./pkgs/** run build",
     "dev": "pnpm -r --parallel --filter \"apps/*\" run dev",
-    "test": "pnpm -r --filter ./packages/** test",
+    "test": "pnpm -r --filter ./pkgs/** test",
     "lint": "pnpm -r lint",
     "version:changes": "changeset version",
     "publish:changes": "changeset publish",

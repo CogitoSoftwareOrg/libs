@@ -14,7 +14,7 @@ export default defineConfig({
       alias: {
         "@cogisoft/ui-svelte-daisy": fileURLToPath(
           new URL(
-            "../../packages/ui-svelte-daisy/src/lib/index.ts",
+            "../../pkgs/ui-svelte-daisy/src/lib/index.ts",
             import.meta.url
           )
         ),
