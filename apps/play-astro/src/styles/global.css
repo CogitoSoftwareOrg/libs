@@ -1,5 +1,38 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
-@source "../../node_modules/@cogisoft/ui-astro/src";
-@source "../../node_modules/@cogisoft/ui-svelte-daisy/dist";
+@plugin "@tailwindcss/typography";
+
+@source "../../../../packages/ui-svelte-daisy/dist/*";
+@source "../../../../packages/ui-astro/src/*";
+
+@import "./theme.css";
+@import "./fonts.css";
+@import "./scroll.css";
+
+/*
+* ===================================================================
+* ГЛОБАЛЬНОЕ МАСШТАБИРОВАНИЕ ТЕКСТА И ИНТЕРФЕЙСА ДЛЯ РАЗНЫХ ЭКРАНОВ
+* ===================================================================
+* Этот код увеличивает базовый размер шрифта для всего документа
+* на больших экранах. Так как Tailwind использует rem, весь интерфейс
+* (шрифты, отступы и т.д.) будет пропорционально увеличиваться.
+*/
+
+html {
+  /* Базовый размер для мобильных и десктопов до Full HD */
+  font-size: 16px;
+}
+
+/* Для экранов Full HD (1920px) и шире */
+@media (min-width: 1920px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+/* Для экранов 2K, 4K (2560px) и шире */
+@media (min-width: 2560px) {
+  html {
+    font-size: 50px;
+  }
+}

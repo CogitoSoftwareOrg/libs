@@ -1,0 +1,202 @@
+{
+  "locale": "en",
+  "slug": "quizbee-base",
+  "meta": {
+    "title": "QuizBee - Learn Smarter with AI-Powered Quizzes",
+    "description": "Transform your study materials into interactive AI-powered quizzes. Adaptive learning, AI tutoring, and progress tracking for students and professionals.",
+    "image": "/bee_v3.svg",
+    "active": "home",
+    "headerCtaHref": "{{APP_URL}}",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "QuizBee",
+      "description": "AI-powered quiz generation platform that transforms study materials into interactive quizzes",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "6",
+        "reviewCount": "6"
+      }
+    }
+  },
+  "sections": [
+    {
+      "type": "Hero",
+      "props": {
+        "title": "Transform Your Study Materials into",
+        "titleHighlight": "Interactive Quizzes",
+        "description": "Upload your lecture notes, textbooks, or study guides. QuizBee uses AI to generate personalized quizzes that help you ace your midterms and exams.",
+        "buttonText": "Start creating quizzes",
+        "footerText": "Free to start • No credit card required ",
+        "href": "{{APP_URL}}",
+        "image": "",
+        "titleAlign": "center",
+        "descriptionAlign": "center",
+        "footerAlign": "center",
+        "position": "right",
+        "center": true,
+        "textWidth": "max-w-5xl",
+        "titleSize": "text-7xl 2xl:text-8xl",
+        "descriptionSize": "text-xl 2xl:text-2xl py-6",
+        "buttonSize": "xl"
+      }
+    },
+    {
+      "type": "Pains",
+      "props": {
+        "title": "Tired of Studying That Doesn’t Stick?",
+        "theme": "",
+        "pains": [
+          {
+            "title": "You Read… and Forget",
+            "description": "You spend hours rereading, but when it’s test time, everything vanishes from memory.",
+            "icon": "book-open-text"
+          },
+          {
+            "title": "Materials Everywhere, No Structure",
+            "description": "Notes, PDFs, screenshots — but no way to turn them into something useful for real learning.",
+            "icon": "file-stack"
+          },
+          {
+            "title": "Tired of endless AI Chats",
+            "description": "Tired of re-uploading and re-explaining the same content over and over to AI chats? ",
+            "icon": "message-circle-x"
+          },
+          {
+            "title": "Hard Work, Unclear Results",
+            "description": "You study hard, but before the exam, you’re unsure what to review or what you’ve missed.",
+            "icon": "frown"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Features",
+      "props": {
+        "title": "Powerful Features for Smarter Learning",
+        "subtitle": "What Makes QuizBee Special",
+        "theme": "default",
+        "features": [
+          {
+            "title": "AI-Generated Quizzes",
+            "description": "Upload your study materials and instantly get customized quizzes tailored to your content. PDFs, documents, notes - we handle it all.",
+            "icon": "bot"
+          },
+          {
+            "title": "AI Tutor Conversations",
+            "description": "After each question you can chat with an AI tutor that knows your materials. Get explanations, clarifications, and deeper insights instantly.",
+            "icon": "message-circle"
+          },
+          {
+            "title": "Dynamic Difficulty Adjustment",
+            "description": "Control the difficulty in real-time as you take quizzes. Too easy? Bump it up. Too hard? Dial it down. The quiz adapts to your learning pace.",
+            "icon": "sliders-horizontal"
+          },
+
+          {
+            "title": "Topic Refinement",
+            "description": "Adjust the focus of your quiz mid-session. Want to drill deeper into a specific topic? Just ask, and the quiz adapts.",
+            "icon": "target"
+          },
+          {
+            "title": "Progress Tracking",
+            "description": "Monitor your performance over time. See which topics you've mastered and which need more attention.",
+            "icon": "trending-up"
+          },
+          {
+            "title": "Share & Study Together",
+            "description": "Share your custom quizzes with friends and classmates. Study together, challenge each other, and master your subjects as a team.",
+            "icon": "users"
+          }
+        ],
+        "stats": {
+          "total": "200+",
+          "label": "Quizzes Generated Daily",
+          "description": "Join hundreds of students and professionals using QuizBee to master their materials"
+        }
+      }
+    },
+    {
+      "type": "HowItWorks",
+      "props": {
+        "title": "Get Started in 4 Simple Steps",
+        "subtitle": "How QuizBee Works",
+        "theme": "",
+        "steps": [
+          {
+            "number": 1,
+            "title": "Upload Your Materials",
+            "description": "Drop your PDFs, documents, or notes into QuizBee. Our AI analyzes the content and prepares to create personalized quizzes based on your materials."
+          },
+          {
+            "number": 2,
+            "title": "Take Adaptive Quizzes",
+            "description": "Start your quiz and adjust difficulty on the fly. Refine topics, change complexity, and learn at your own pace. Each question is generated based on your actual study materials."
+          },
+          {
+            "number": 3,
+            "title": "Learn with AI Tutoring",
+            "description": "Stuck on a question? Start a conversation with your AI tutor. Get detailed explanations, explore related concepts, and truly understand the material - not just memorize answers."
+          },
+          {
+            "number": 4,
+            "title": "Grow Over Time",
+            "description": "QuizBee learns from your journey. As you progress, it identifies your weak spots and knowledge gaps, adapting future questions to focus on areas that need improvement. Build lasting mastery through continuous, personalized reinforcement."
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQ",
+      "props": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Got Questions?",
+        "theme": "",
+        "questions": [
+          {
+            "question": "Is there a free tier?",
+            "answer": "Yes. We offer a free tier with limited features to help you get started. If you want to try Plus or Pro tiers, you can always get money back within 14 days of purchase."
+          },
+          {
+            "question": "How is my payment information handled?",
+            "answer": "Your credit card information is processed entirely by Stripe, a highly reliable and secure payment platform. We never have access to your card details at any time."
+          },
+          {
+            "question": "What file formats do you support?",
+            "answer": "We support PDF, DOCX, PPTX, Markdown, TXT and more. You can upload lecture notes, textbooks, study guides, articles - pretty much any text based learning material."
+          },
+          {
+            "question": "How does the AI tutor work?",
+            "answer": "After each quiz question, you can start a conversation with our AI tutor. It has full context of your study materials and can explain concepts, provide examples, clarify confusing topics, and answer follow-up questions - all based on YOUR specific materials."
+          },
+
+          {
+            "question": "Is my data secure and private?",
+            "answer": "Absolutely. Your study materials and quiz history are encrypted with AES-256 and stored securely. As a Europe-based company, we strictly follow GDPR. We never share your data for unauthorized uses—you own it and can delete anytime."
+          },
+          {
+            "question": "Can I cancel my subscription anytime?",
+            "answer": "Yes! No long-term contracts or commitments. Cancel with one click from your account settings. You'll keep access until the end of your billing period, and we offer a 14-day money-back guarantee."
+          }
+        ]
+      }
+    },
+    {
+      "type": "CTA",
+      "props": {
+        "headline": "Ready to Transform Your Learning?",
+        "subheadline": "Join hundres of students who are studying smarter with AI-powered quizzes. Upload your first material and create a quiz in seconds. No credit card required.",
+        "buttonText": "Start for Free - No Credit Card Required",
+        "buttonHref": "{{APP_URL}}",
+        "theme": ""
+      }
+    }
+  ]
+}
