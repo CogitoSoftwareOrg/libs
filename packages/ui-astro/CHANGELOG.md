@@ -1,5 +1,11 @@
 # @cogisoft/ui-astro
 
+## 0.2.0
+
+### Minor Changes
+
+- b55e0a2: quizbee landing in cogisoft created
+
 ## 0.1.22
 
 ### Patch Changes
